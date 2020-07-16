@@ -3,9 +3,14 @@
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
 
-trigger:
-- master
-- develop
+#trigger:
+#- master
+#- develop
+pr:
+  branches:
+    include:
+    - master
+    - develop
 
 #- develop
 pool:
